@@ -31,7 +31,11 @@ $(document).ready(function(){
  	$('#role').val("");
  	$('#sDate').val("");
  	$('#rate').val("");
- 	
- 	return false
+
+ 	return false;
  });
+
+ database.ref().on("child_added", function(childSnapshot, prevChildKey){
+ 		console.log(childSnapshot.val())
+ })
 });
